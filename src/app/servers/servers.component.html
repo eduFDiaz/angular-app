@@ -24,6 +24,5 @@
 <ng-template #elseTemplate>
         <p>No server was created yet!</p>
 </ng-template>
-
-<app-server></app-server>
-<app-server></app-server>
+<!-- ngfor will loop through servers using the temp var server -->
+<app-server *ngFor="let server of servers"></app-server>
