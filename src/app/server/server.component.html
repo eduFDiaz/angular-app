@@ -1,3 +1,5 @@
 <!-- <p>{{ 'Server' }} with ID: {{ serverId }} is: {{ serverState }}</p>String interpolation -->
 <!-- <p>{{ 'Server' }} with ID: {{ serverId }} is: {{ getServerState() }}</p>function call -->
-<p>{{ 'Server' }} with ID: {{ serverId }} is: {{ getServerState() }}</p> <!-- property binding -->
+<!-- See style directive [ngStyle] functioning in the next line, -->
+<!-- it modifies the style of the element they are applied upon -->
+<p [ngClass]="{ 'online': serverState === 'online' }" [ngStyle]="{ backgroundColor: getColor() }">{{ 'Server' }} with ID: {{ serverId }} is: {{ getServerState() }}</p> <!-- property binding -->
